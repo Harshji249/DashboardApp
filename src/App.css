@@ -1,38 +1,281 @@
-.App {
-  text-align: center;
+*{
+  margin: 0;
+  padding: 0;
 }
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.main{
   display: flex;
-  flex-direction: column;
+}
+.home{
+  cursor: pointer;
+  background-color: #EBF8F2;
+  color: #56C78E;
+  padding: 1em 1em;
+  border-radius: 10px;
+}
+
+.nav{
+  padding: 2rem 2rem;
+}
+.nav div{
+  margin-top: 20px;
+}
+.img{
+  height: 40px;
+  width: 40px;
+  background-color: gray;
+  border-radius: 50px;
+}
+
+.logo{
+  display: flex;
+  box-shadow: 1px 1px 5px black;
   align-items: center;
+  width: fit-content;
+  padding: 5px 5px;
+  border-radius: 10px;
+}
+.logo div{
+  margin: 0 5px;
+}
+
+.manage li{
+  list-style: none;
+  margin: 20px;
+}
+
+a{
+  text-decoration: none;
+}
+
+/* DASHBORAD */
+
+.dashtable{
+  margin: 1em;
+  border-radius: 10px;
+  box-shadow: 1px 1px 5px black;
+}
+
+.search{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+
+.s-icon{
+  height: 30px;
+  width: 30px;
+  display: flex;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
+  align-items: center;
+  border-radius: 50px;
+}
+
+.top-logo{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-left: 70rem;
+  height: 40px;
+  width: 40px;
+  background-color: #00AB55;
   color: white;
+  border-radius: 50px;
 }
 
-.App-link {
-  color: #61dafb;
+.offers{
+  margin-top: 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.jpara{
+  display: flex;
+  margin-top: 1em;
+}
+.jpara p {
+  margin-right: 1em ;
+}
+
+.jbutton button{
+  padding: 0.7em 1.5em;
+  background: none;
+  border-radius: 10px;
+  background-color: #00AB55;
+  color: white;
+  border: none;
+}
+.rowfirst{
+  display: flex;
+}
+.rowfirst .card{
+  margin: 2rem 6rem;
+}
+.rowsecond{
+  display: flex;
+}
+.rowsecond .card{
+  margin: 2rem 6rem;
+}
+.card{
+  display: flex;
+}
+.card-logo{
+  border-radius: 50px;
+  margin-right: 10px;
+}
+.suitcase{
+  height: 30px;
+  width: 30px;
+  margin: 1rem 1rem;
+}
+
+/* ICONS COLOR */
+.to{
+  color: #00B8D9;
+}
+.po{
+  color: #FFAB00;
+}
+.pob{
+  color:#F29339;
+}
+.jovd{
+  color :#FF5630;
+}
+.jo{
+  color: #36B37E;
+}
+.nj{
+  color: #637381;
+}
+/* ICON BORDER */
+.b1{
+  border: 4px solid #00B8D9 ;
+}
+.b2{
+  border: 4px solid #FFAB00 ;
+}
+.b3{
+  border: 4px solid #F29339;
+}
+.b4{
+  border: 4px solid #FF5630;
+}
+.b5{
+  border: 4px solid #36B37E;
+}
+.b6{
+  border : 4px solid #637381;
+}
+
+/* TABLE CSS */
+.main-table{
+   box-shadow: 1px 1px 5px black;
+   border-radius: 10px;
+  width: 80%;
+  margin: auto;
+  display: flex;
+  justify-content: center;
+  position: relative;
+  left: 100px;
+}
+.table{
+  border-collapse: separate;
+  border-spacing: 0px 20px ;
+}
+.headings{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #F4F6F8;
+}
+.headings h4{
+  display: flex;
+  margin: 0 1em;
+  cursor: pointer;
+  padding: 1em 0;
+}
+.hover-underline-animation {
+  display: inline-block;
+  position: relative;
+  color: 
+#0087ca;
+}
+
+.hover-underline-animation:after {
+  content: '';
+  position: absolute;
+  width: 100%;
+  transform: scaleX(0);
+  height: 2px;
+  bottom: 0;
+  left: 0;
+  background-color: 
+#0087ca;
+  transform-origin: bottom right;
+  transition: transform 0.25s ease-out;
+}
+
+.hover-underline-animation:hover:after {
+  transform: scaleX(1);
+  transform-origin: bottom left;
+}
+h4 p{
+  margin: 0 0.5em;
+}
+tr{
+  display: flex;
+}
+
+.dropmenu{
+  padding: 0.5em 2em;
+  border-radius: 5px;
+}
+.filters{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.filters div{
+  margin-top: 1rem;
+  margin-right: 6rem  ;
+}
+
+.date{
+  padding: 0.5em 2em;
+  border-radius: 5px;
+  border: 2px black;
+}
+.filtersearch{
+  padding: 0.5em 6em;
+  border-radius: 5px;
+} 
+.mainhead{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0 6rem;
+  padding: 20px;
+}
+.mainhead th{
+  margin: 0 3em;
+}
+
+.memoji{
+  display: flex;
+}
+.memoji img{
+  height: 50px;
+  width: 50px;
+  border-radius: 100px;
+  margin-top: 15px;
+}
+
+.row td{
+  margin: 1em 3em;
+}
+td{
+  text-align: center;
 }
