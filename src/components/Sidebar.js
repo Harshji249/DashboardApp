@@ -13,7 +13,7 @@ const Sidebar = () => {
                         <h3>People Care System</h3>
                     </div>
                     <div className="home">
-                        <p>Home</p>
+                        <p style={{color: "#00AB55"}}>Home</p>
                     </div>
                     <div className="manage">
                         <p>Management</p>

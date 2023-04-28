@@ -1,9 +1,21 @@
 import React from 'react'
-
+import { useState } from 'react'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faUser, faSuitcase,faCircleCheck, faCircleXmark, faBell, faClock, faMagnifyingGlass } from '@fortawesome/free-solid-svg-icons'
 import "../App.css"
+import User from './userApi'
 const Dashboard = () => {
+    const [user, setUser] = useState(User);
+
+    const getSize = (typeOfOffer)=>{
+        var count =0;
+        for(var i=0; i< user.length; i++){
+            if(typeOfOffer === user[i].status){
+                count = count+1;
+            }
+        }
+        return count;
+    }
     return (
         <>
             <div className='top'>
@@ -34,7 +46,7 @@ const Dashboard = () => {
                             </div>
                             <div className='card-text'>
                                 <h3>Total Offered</h3>
-                                <p>20 invoices</p>
+                                <p>{user.length} invoices</p>
                                 <p className='to'>$1,205.75</p>
                             </div>
                         </div>
@@ -44,7 +56,7 @@ const Dashboard = () => {
                             </div>
                             <div className='card-text'>
                                 <h3>Pending Offers</h3>
-                                <p>20 invoices</p>
+                                <p>{getSize("Pending Offers")} invoices</p>
                                 <p className='po'>$1,205.75</p>
                             </div>
                         </div>
@@ -54,7 +66,7 @@ const Dashboard = () => {
                             </div>
                             <div className='card-text'>
                                 <h3>Pending Onboarding</h3>
-                                <p>20 invoices</p>
+                                <p>{getSize("Pending Onboarding")} invoices</p>
                                 <p className='pob'>$1,205.75</p>
                             </div>
                         </div>
@@ -68,7 +80,7 @@ const Dashboard = () => {
                             </div>
                             <div className='card-text'>
                                 <h3>Joining Overdue</h3>
-                                <p>20 invoices</p>
+                                <p>{getSize("Joining Overdue")} invoices</p>
                                 <p className='jovd'>$1,205.75</p>
                             </div>
                         </div>
@@ -78,7 +90,7 @@ const Dashboard = () => {
                             </div>
                             <div className='card-text'>
                                 <h3>Joined</h3>
-                                <p>20 invoices</p>
+                                <p>{getSize("Joined")} invoices</p>
                                 <p className='jo'>$1,205.75</p>
                             </div>
                         </div>
@@ -88,7 +100,7 @@ const Dashboard = () => {
                             </div>
                             <div className='card-text'>
                                 <h3>Not Joined</h3>
-                                <p>20 invoices</p>
+                                <p>{getSize("Not Joined")} invoices</p>
                                 <p className='nj'>$1,205.75</p>
                             </div>
                         </div>
